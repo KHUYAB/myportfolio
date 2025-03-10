@@ -1,0 +1,57 @@
+<!-- templates/about.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="about-section py-5 text-white" style="background: linear-gradient(135deg, #1e1e2f, #2a2a40);">
+    <div class="container">
+        <h1 class="display-4 text-center mb-4">About Me</h1>
+        <div class="row align-items-center">
+            <!-- Profile Picture -->
+            <div class="col-md-4 text-center">
+                <img src="{{ url_for('static', filename='images/kuyab.jpg') }}" alt="Profile Picture" class="img-fluid rounded-circle shadow-lg" width="200">
+            </div>
+            <!-- About Me Content -->
+            <div class="col-md-8">
+                <p class="lead">Hi, I'm <strong>Norhan D. Kuyab</strong>, 3 Bsit Student</p>
+                <p>I specialize in:</p>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-code me-2"></i>Python Basic Programming</li>
+                    <li><i class="fas fa-shield-alt me-2"></i>Basic Hacking wifi</li>
+                    <li><i class="fas fa-palette me-2"></i>UX/UI Design</li>
+                </ul>
+                <p>I'm always eager to learn new skills and take on challenging projects. Let's create something amazing together!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Skills Section -->
+<div class="skills-section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">My Skills</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="skill-card p-4 shadow-sm">
+                    <i class="fas fa-laptop-code fa-3x mb-3"></i>
+                    <h3>Web Development</h3>
+                    <p>Proficient in HTML, CSS, JavaScript, and Flask.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="skill-card p-4 shadow-sm">
+                    <i class="fas fa-code fa-3x mb-3"></i>
+                    <h3>Designer</h3>
+                    <p>Experienced in Photoshop, figma, and photopea</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="skill-card p-4 shadow-sm">
+                    <i class="fas fa-database fa-3x mb-3"></i>
+                    <h3>Database Management</h3>
+                    <p>Knowledgeable in SQL and Mysql</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
