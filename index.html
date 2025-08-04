@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="container nav-container">
+    <img src="images/logo.jpg" alt="Logo" class="logo" />
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <nav id="navMenu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="home" class="section home-section">
+  <div class="container home-container" data-aos="fade-up">
+    <div class="home-text">
+      <h2>Hi</h2>
+      <h1>I'm <span>Norhan D Kuyab</span></h1>
+      <p>I'm a student driven by a profound passion for technology and a strong willingness to learn.</p>
+      <div class="contact-info">
+        <p>📞 (+63) 9539523055</p>
+        <p>✉️ norhankuyab@gmail.com</p>
+        <p>📍 Pebpolaoan, Carmen, Cotabato</p>
+      </div>
+      <div class="home-buttons">
+        <a href="resume/myresume.pdf" target="_blank" class="btn green">View Resume</a>
+        <a href="resume/myresume.pdf" download class="btn blue">Download Resume</a>
+      </div>
+    </div>
+    <div class="home-image" data-aos="zoom-in">
+      <div class="hexagon">
+        <img src="images/khuyab.jpg" alt="Norhan D Kuyab">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section about-section">
+  <div class="container about-container">
+    <div class="about-left" data-aos="fade-right">
+      <h2>About Me</h2>
+      <p class="subtitle">✨ Transforming ideas into digital experiences ✨</p>
+      <h1>Hello, I'm <span>Norhan D Kuyab</span></h1>
+      <p class="about-text">
+        I'm a student passionate about technology and web development, 
+        constantly exploring new ideas to create impactful digital experiences.
+      </p>
+      <div class="about-buttons">
+        <a href="resume/myresume.pdf" download class="btn purple">Download CV</a>
+        <a href="#projects" class="btn outline">View Projects</a>
+      </div>
+    </div>
+    <div class="about-right" data-aos="fade-left">
+      <div class="profile-circle">
+        <img src="images/khuyab.jpg" alt="Norhan D Kuyab">
+      </div>
+    </div>
+  </div>
+
+  <div class="about-stats">
+    <div class="stat-card" data-aos="zoom-in">
+      <h3>4</h3>
+      <p>Total Projects</p>
+    </div>
+    <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+      <h3>4</h3>
+      <p>Certificates</p>
+    </div>
+    <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+      <h3>3</h3>
+      <p>Years of Experience</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <h2 data-aos="fade-up">Portfolio Showcase</h2>
+    <p class="subtitle" data-aos="fade-up" data-aos-delay="100">
+      Explore my journey through projects, certifications, and technical expertise.
+    </p>
+
+    <div class="tabs" data-aos="fade-up" data-aos-delay="200">
+      <button class="tab active" data-tab="projects-tab">Projects</button>
+      <button class="tab" data-tab="certificates-tab">Certificates</button>
+      <button class="tab" data-tab="techstack-tab">My Skills</button>
+    </div>
+
+    <!-- Image Slider Modal -->
+    <div id="imageSliderModal" class="image-slider-modal hidden">
+      <span class="close-button" onclick="closeImageSlider()">← Back</span>
+      <div class="slider">
+        <div class="slides" id="sliderImages"></div>
+        <button class="prev" onclick="prevSlide()">❮</button>
+        <button class="next" onclick="nextSlide()">❯</button>
+      </div>
+    </div>
+
+    <div class="tabs-content">
+      <!-- Projects Tab -->
+      <div class="tab-content active" id="projects-tab">
+        <div class="card" data-aos="fade-up">
+          <img src="tshirts/nkn.png" alt="Project 1" class="zoomable"
+               onclick="openImageSlider(['tshirts/nkn.png', 'tshirts/tnk.jpg'])">
+          <h3>My Tshirts Design</h3>
+          <p>Creative wearable branding concepts.</p>
+          <div class="card-buttons">
+            <a href="javascript:void(0);" class="btn small outline"
+               onclick="openProjectModal('My Tshirts Design', 'A collection of original t-shirt designs using Adobe Photoshop and Illustrator. These designs were created for branding purposes, with a strong emphasis on layout balance, color harmony, and modern appeal.')">
+               Details
+            </a>
+          </div>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <img src="capstone/1.png" alt="Project 2" class="zoomable"
+               onclick="openImageSlider(['capstone/1.png', 'capstone/2.png', 'capstone/3.png', 'capstone/4.png', 'capstone/5.png', 'capstone/6.png', 'capstone/7.png'])">
+          <h3>IOS System</h3>
+          <p>For CFCST Registrar Office</p>
+          <div class="card-buttons">
+            <a href="javascript:void(0);" class="btn small outline"
+               onclick="openProjectModal('IOS System', 'A document request and tracking system designed for CFCST Registrar Office. Features include real-time monitoring, automated request validation, and secure data handling, built with PHP and MySQL.')">
+               Details
+            </a>
+          </div>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <img src="images/f.png" alt="Project 3" class="zoomable"
+               onclick="openImageSlider(['application/1.png', 'application/2.png', 'application/3.png','application/4.png'])">
+          <h3>Prototype Application</h3>
+          <p>Presentation-ready mobile app interface.</p>
+          <div class="card-buttons">
+            <a href="javascript:void(0);" class="btn small outline"
+               onclick="openProjectModal('Prototype Application', 'A mobile app prototype developed for academic demos. It features streamlined navigation, responsive layouts, and modern UI principles, showcasing interactive school-related modules.')">
+               Details
+            </a>
+          </div>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="300">
+          <img src="images/ps.png" alt="Project 4" class="zoomable"
+               onclick="openImageSlider(['images/ps.png', 'images/abad.jpg'])">
+          <h3>Tarpaulin Design</h3>
+          <p>Layout projects using Photoshop</p>
+          <div class="card-buttons">
+            <a href="javascript:void(0);" class="btn small outline"
+               onclick="openProjectModal('Tarpaulin Design', 'Professional tarpaulin layouts for events, made with Adobe Photoshop. Designed with attention to typographic clarity, visual impact, and print quality.')">
+               Details
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+<!-- Certificates Tab -->
+<div class="tab-content" id="certificates-tab">
+  <!-- CCNA Certificate -->
+  <div class="card" data-aos="zoom-in" onclick="openCertificateModal('certificates/1.png', 'CCNA Certificate', 'Cisco Certified Network Associate – foundational knowledge in networking and IT infrastructure.')">
+    <img src="certificates/1.png" alt="Certificate 1" class="zoomable">
+    <h3>CCNA Certificate</h3>
+    <p>Demonstrates foundational knowledge in networking and IT infrastructure, certified by Cisco.</p>
+  </div>
+
+  <!-- Ethical Hacking Certificate -->
+  <div class="card" data-aos="zoom-in" data-aos-delay="100" onclick="openCertificateModal('certificates/2.png', 'Ethical Hacking Certificate', 'Hands-on experience in vulnerability assessment, penetration testing, and SQL injection techniques.')">
+    <img src="certificates/2.png" alt="Certificate 2" class="zoomable">
+    <h3>Ethical Hacking Certificate</h3>
+    <p>Provides hands-on experience in vulnerability assessment, penetration testing, and SQL injection prevention.</p>
+  </div>
+
+  <!-- IoT Certificate -->
+  <div class="card" data-aos="zoom-in" data-aos-delay="200" onclick="openCertificateModal('certificates/3.jpg', 'IoT Certificate', 'Focuses on practical applications and deployment of Internet of Things technology.')">
+    <img src="certificates/3.jpg" alt="Certificate 3" class="zoomable">
+    <h3>IoT Certificate</h3>
+    <p>Covers practical implementation and deployment of Internet of Things (IoT) technologies.</p>
+  </div>
+
+  <!-- Participation Certificate -->
+  <div class="card" data-aos="zoom-in" data-aos-delay="300" onclick="openCertificateModal('certificates/4.jpg', 'Certificate of Participation', 'Recognizes participation in workshops and technical training related to a capstone project.')">
+    <img src="certificates/4.jpg" alt="Certificate 4" class="zoomable">
+    <h3>Certificate of Participation</h3>
+    <p>Recognizes active participation in workshops and technical training for a capstone project at CFCST.</p>
+  </div>
+</div>
+
+
+      
+
+  <!-- Techstack Tab -->
+<div class="tab-content" id="techstack-tab">
+  <div class="card" data-aos="fade-up">
+    <img src="icon/OIP.webp" alt="PHP Logo" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 10px;">
+    <h3>PHP & MySQL</h3>
+    <p>Robust server-side scripting language paired with a powerful relational database. Ideal for building secure, data-driven web applications and backend systems.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="100">
+    <img src="icon/JS.png" alt="JavaScript Logo" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 10px;">
+    <h3>JavaScript</h3>
+    <p>A high-level, versatile scripting language for implementing interactive and dynamic features on web interfaces, enhancing user experience across devices.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="200">
+    <img src="icon/HT.png" alt="HTML5 Logo" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 10px;">
+    <h3>HTML5</h3>
+    <p>The foundational markup language used to structure and present content on the web. Enables responsive design and semantic layout.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="300">
+    <img src="icon/CSS.png" alt="CSS3 Logo" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 10px;">
+    <h3>CSS3</h3>
+    <p>Modern styling language that brings visual appeal to web pages. Supports animations, grid layouts, and responsive design techniques.</p>
+  </div>
+
+ <div class="card" data-aos="fade-up" data-aos-delay="300">
+  <img src="icon/PY.png" alt="Python Logo" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 10px;">
+  <h3>PYTHON</h3>
+  <p>A versatile and powerful programming language I use for automation, data analysis, and backend development. With Python's clean syntax and rich ecosystem, I can efficiently solve problems, build scalable applications, and streamline workflows across various domains.</p>
+</div>
+
+
+ <div class="card" data-aos="fade-up" data-aos-delay="300">
+  <img src="icon/MYS.png" alt="MySQL Logo" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 10px;">
+  <h3>MYSQL</h3>
+  <p>A popular relational database management system used for storing and managing data. With its robust features and scalability, I can efficiently handle data-driven applications and ensure data integrity.</p>
+</div>
+
+
+  <div class="card" data-aos="fade-up" data-aos-delay="400">
+    <img src="icon/boot.webp" alt="Bootstrap Logo" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 10px;">
+    <h3>Bootstrap</h3>
+    <p>Popular front-end framework for building responsive, mobile-first websites with pre-designed components and utility classes.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="500">
+    <img src="icon/git.png" alt="GitHub Logo" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 10px;">
+    <h3>GitHub</h3>
+    <p>Version control platform enabling collaboration, code sharing, and project tracking through Git. Supports efficient software development workflows.</p>
+  </div>
+</div>
+
+
+
+  <!-- Modal: Project Details -->
+  <div id="projectModal" class="project-modal hidden">
+    <div class="modal-content-box">
+      <span class="close-btn" onclick="closeProjectModal()">× Exit</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <!-- Modal: Certificate Zoom -->
+  <div id="certificateModal" class="project-modal hidden">
+    <div class="modal-content-box">
+      <span class="close-btn" onclick="closeCertificateModal()">× Exit</span>
+      <img id="certificateImage" src="" alt="Certificate" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+      <h3 id="certificateTitle"></h3>
+      <p id="certificateDescription"></p>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="section contact-section">
+  <div class="contact-wrapper">
+    <div class="contact-image" data-aos="fade-right">
+      <img src="images/contact.jpg" alt="Contact Me">
+    </div>
+    <div class="form-container" data-aos="fade-left">
+      <div class="form-title">Contact Me</div>
+      <div class="form-subtitle">If you want this project, feel free to contact me!</div>
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="ebe3b47d-99bc-4530-98d6-b9e61a0bb743">
+        <div class="input-group">
+          <i class="icon fa fa-user"></i>
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="input-group">
+          <i class="icon fa fa-envelope"></i>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="input-group">
+          <i class="icon fa fa-comment"></i>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=100089166460312" target="_blank">
+          <img src="images/face.png" alt="Facebook">
+        </a>
+        <a href="https://mail.google.com/mail/u/0/?hl=en#inbox" target="_blank">
+          <img src="images/gmail.png" alt="Gmail">
+        </a>
+        <a href="https://www.tiktok.com/@norhan.kuyab" target="_blank">
+          <img src="images/tiktok.png" alt="Tiktok">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Norhan D Kuyab. All rights reserved.</p>
+</footer>
+
+<!-- Script Files -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
