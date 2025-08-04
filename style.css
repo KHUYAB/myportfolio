@@ -1183,16 +1183,7 @@ footer {
 
 
 
-#about-typewriter-name {
-  display: inline-block;
-  animation: blink 0.75s step-end infinite;
-}
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
 
 
 .about-buttons {
@@ -1230,6 +1221,7 @@ footer {
   margin: 0 auto 10px;
   border-radius: 50%;
 }
+
 
 
 
