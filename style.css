@@ -1147,6 +1147,91 @@ footer {
 
 
 
+#typewriter-name {
+  display: inline-block;
+  border-right: 2px solid #af3a82;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Default layout for desktop (no change) */
+.home-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+/* Responsive fix for small screens */
+@media (max-width: 600px) {
+  .home-buttons {
+    flex-direction: column;
+    align-items: center; /* center items horizontally */
+    gap: 15px; /* spacing between stacked buttons */
+  }
+
+  .home-buttons .btn {
+    width: 90%;      /* buttons expand nicely on small screens */
+    text-align: center;
+    max-width: 300px;
+  }
+}
+
+
+
+#about-typewriter-name {
+  display: inline-block;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+.about-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.about-buttons .btn {
+  padding: 10px 20px;
+  white-space: nowrap;
+  text-align: center;
+  flex: 1 1 auto;
+  max-width: 200px;
+}
+
+/* Responsive behavior for small screens */
+@media (max-width: 600px) {
+  .about-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .about-buttons .btn {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+
+.stat-card img {
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+}
+
+
 
 
 
