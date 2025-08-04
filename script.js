@@ -221,7 +221,7 @@ function closeCertificateModal() {
 
   document.addEventListener("DOMContentLoaded", function () {
     const aboutTarget = document.getElementById("about-typewriter-name");
-    const aboutText = "Nor Kuyab";
+    const aboutText = "Nor kuyab";
     let i = 0;
     let deleting = false;
 
@@ -252,4 +252,3 @@ function closeCertificateModal() {
 
     animateAbout();
   });
-
