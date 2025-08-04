@@ -179,3 +179,76 @@ function openCertificateModal(imageSrc, title, description) {
 function closeCertificateModal() {
   document.getElementById("certificateModal").classList.add("hidden");
 }
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const target = document.getElementById("typewriter-name");
+    const text = "Norhan D Kuyab";
+    let index = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      if (isDeleting) {
+        index--;
+        target.textContent = text.substring(0, index);
+      } else {
+        index++;
+        target.textContent = text.substring(0, index);
+      }
+
+      if (!isDeleting && index === text.length) {
+        setTimeout(() => {
+          isDeleting = true;
+          typeEffect();
+        }, 2000); // pause before delete
+        return;
+      }
+
+      if (isDeleting && index === 0) {
+        isDeleting = false;
+      }
+
+      const speed = isDeleting ? 80 : 120;
+      setTimeout(typeEffect, speed);
+    }
+
+    typeEffect();
+  });
+
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const aboutTarget = document.getElementById("about-typewriter-name");
+    const aboutText = "Norhan D Kuyab";
+    let i = 0;
+    let deleting = false;
+
+    function animateAbout() {
+      if (deleting) {
+        i--;
+        aboutTarget.textContent = aboutText.substring(0, i);
+      } else {
+        i++;
+        aboutTarget.textContent = aboutText.substring(0, i);
+      }
+
+      if (!deleting && i === aboutText.length) {
+        setTimeout(() => {
+          deleting = true;
+          animateAbout();
+        }, 2000); // wait before deleting
+        return;
+      }
+
+      if (deleting && i === 0) {
+        deleting = false;
+      }
+
+      const speed = deleting ? 80 : 120;
+      setTimeout(animateAbout, speed);
+    }
+
+    animateAbout();
+  });
